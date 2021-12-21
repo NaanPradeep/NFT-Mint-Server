@@ -40,7 +40,7 @@ exports.initateMint = async (_utxo, id) => {
   const oldTxHash = utxo.txHash;
   const receiver = await fetch(
     `https://cardano-testnet.blockfrost.io/api/v0/txs/${oldTxHash}/utxos`,
-    { headers: { project_id: "testnet5APdWV3eEMTRg3v1vpB0V4PDoRGOAdWH" } }
+    { headers: { project_id: "PROJECT_ID" } }
   )
   .then((res) => res.json())
     .then((res) => res.inputs[0].address);
